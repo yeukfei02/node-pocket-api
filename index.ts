@@ -1,0 +1,174 @@
+import axios from "axios";
+import { getRootUrl } from "./helpers/helpers";
+import { Config } from "./interface/config";
+import { GetRequestTokenBody } from "./interface/getRequestTokenBody";
+import { GetAccessTokenBody } from "./interface/getAccessTokenBody";
+import { AddItemsBody } from "./interface/addItemsBody";
+import { ModifyItemsBody } from "./interface/modifyItemsBody";
+import { RetrieveItemsBody } from "./interface/retrieveItemsBody";
+
+const rootUrl = getRootUrl();
+
+class Pocket {
+  consumerKey = "";
+  redirectUri = "pocketapp1234:authorizationFinished";
+  requestToken = "";
+  accessToken = "";
+
+  constructor(config?: Config) {
+    if (config) {
+      this.consumerKey = config.consumerKey;
+      this.redirectUri = config.redirectUri;
+    }
+  }
+
+  setConsumerKey(consumerKey: string) {
+    this.consumerKey = consumerKey;
+  }
+
+  setRedirectUri(redirectUri: string) {
+    this.redirectUri = redirectUri;
+  }
+
+  setRequestToken(requestToken: string) {
+    this.requestToken = requestToken;
+  }
+
+  setAccessToken(accessToken: string) {
+    this.accessToken = accessToken;
+  }
+
+  async getRequestToken(data?: GetRequestTokenBody) {
+    let result = "";
+
+    let response = null;
+    try {
+      if (data) {
+        response = await axios.post(`${rootUrl}/oauth/request`, data, {
+          headers: {
+            "Content-Type": "application/json",
+            "X-Accept": "application/json",
+          },
+        });
+      } else {
+        const requestBody = {
+          consumer_key: this.consumerKey,
+          redirect_uri: this.redirectUri,
+        };
+        response = await axios.post(`${rootUrl}/oauth/request`, requestBody, {
+          headers: {
+            "Content-Type": "application/json",
+            "X-Accept": "application/json",
+          },
+        });
+      }
+
+      if (response && response.data) {
+        result = response.data.code;
+        this.requestToken = response.data.code;
+      }
+    } catch (e: any) {
+      console.log("error = ", e.message);
+    }
+
+    return result;
+  }
+
+  async getAccessToken(data?: GetAccessTokenBody) {
+    let result = "";
+
+    let response = null;
+    try {
+      if (data) {
+        response = await axios.post(`${rootUrl}/oauth/authorize`, data, {
+          headers: {
+            "Content-Type": "application/json",
+            "X-Accept": "application/json",
+          },
+        });
+      } else {
+        const requestBody = {
+          consumer_key: this.consumerKey,
+          code: this.requestToken,
+        };
+        response = await axios.post(`${rootUrl}/oauth/authorize`, requestBody, {
+          headers: {
+            "Content-Type": "application/json",
+            "X-Accept": "application/json",
+          },
+        });
+      }
+
+      if (response && response.data) {
+        result = response.data.access_token;
+        this.accessToken = response.data.access_token;
+      }
+    } catch (e: any) {
+      console.log("error = ", e.message);
+    }
+
+    return result;
+  }
+
+  async addItems(data: AddItemsBody) {
+    let result = "";
+
+    try {
+      const response = await axios.post(`${rootUrl}/add`, data, {
+        headers: {
+          "Content-Type": "application/json",
+          "X-Accept": "application/json",
+        },
+      });
+      if (response && response.data) {
+        result = response.data;
+      }
+    } catch (e: any) {
+      console.log("error = ", e.message);
+    }
+
+    return result;
+  }
+
+  async modifyItems(data: ModifyItemsBody) {
+    let result = "";
+
+    try {
+      const response = await axios.post(`${rootUrl}/send`, data, {
+        headers: {
+          "Content-Type": "application/json",
+          "X-Accept": "application/json",
+        },
+      });
+      if (response && response.data) {
+        result = response.data;
+      }
+    } catch (e: any) {
+      console.log("error = ", e.message);
+    }
+
+    return result;
+  }
+
+  async retrieveItems(data: RetrieveItemsBody) {
+    let result = "";
+
+    try {
+      const response = await axios.post(`${rootUrl}/get`, data, {
+        headers: {
+          "Content-Type": "application/json",
+          "X-Accept": "application/json",
+        },
+      });
+      if (response && response.data) {
+        result = response.data;
+      }
+    } catch (e: any) {
+      console.log("error = ", e.message);
+    }
+
+    return result;
+  }
+}
+
+export default Pocket;
