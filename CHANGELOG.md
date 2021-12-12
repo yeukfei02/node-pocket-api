@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/yeukfei02/node-pocket-api/compare/v0.1.7...v0.1.8) (2021-12-12)
+
+
+### Bug Fixes
+
+* 🐛 fix lint script ([1bf998a](https://github.com/yeukfei02/node-pocket-api/commit/1bf998a56001c328dc6d8d35614af4c46d87c301))
+
 ### [0.1.7](https://github.com/yeukfei02/node-pocket-api/compare/v0.1.6...v0.1.7) (2021-12-12)
 
 
