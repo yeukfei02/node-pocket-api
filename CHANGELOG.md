@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/yeukfei02/node-pocket-api/compare/v0.1.6...v0.1.7) (2021-12-12)
+
+
+### Bug Fixes
+
+* 🐛 add dist js folder ([da6ed28](https://github.com/yeukfei02/node-pocket-api/commit/da6ed28c994b53b54ccabe70eb6b29f772aa75b2))
+
 ### [0.1.6](https://github.com/yeukfei02/node-pocket-api/compare/v0.1.5...v0.1.6) (2021-12-12)
 
 
