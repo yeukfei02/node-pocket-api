@@ -29,7 +29,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "lint": "eslint . --quiet --fix",
+    "lint": "eslint '*/**/*.{ts,tsx}' --quiet --fix",
     "commit": "git-cz",
     "release": "standard-version"
   }
