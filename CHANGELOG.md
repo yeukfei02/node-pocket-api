@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/yeukfei02/node-pocket-api/compare/v0.1.5...v0.1.6) (2021-12-12)
+
+
+### Bug Fixes
+
+* 🐛 add tsc index.js ([59a67fa](https://github.com/yeukfei02/node-pocket-api/commit/59a67fab13a4a1f09b9b1974384bd7889c78a46c))
+
 ### [0.1.5](https://github.com/yeukfei02/node-pocket-api/compare/v0.1.4...v0.1.5) (2021-12-12)
 
 
