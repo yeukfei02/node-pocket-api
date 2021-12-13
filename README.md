@@ -1,6 +1,6 @@
 # node-pocket-api
 
-node-pocket-api
+node lib for [Pocket API](http://getpocket.com/developer/docs/overview)
 
 ## Install
 
