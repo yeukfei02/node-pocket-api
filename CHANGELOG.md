@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.3](https://github.com/yeukfei02/node-pocket-api/compare/v0.2.2...v0.2.3) (2021-12-21)
+
+
+### Features
+
+* 🎸 add getAuthorizeUrl ([a56d677](https://github.com/yeukfei02/node-pocket-api/commit/a56d677bc1592b8f6290fe757a27b9b6e59f1169))
+
 ### [0.2.2](https://github.com/yeukfei02/node-pocket-api/compare/v0.2.1...v0.2.2) (2021-12-13)
 
 ### [0.2.1](https://github.com/yeukfei02/node-pocket-api/compare/v0.2.0...v0.2.1) (2021-12-13)
