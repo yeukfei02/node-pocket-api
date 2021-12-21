@@ -48,6 +48,15 @@ export const pocketTest = () => {
       });
     });
 
+    describe("getAuthorizeUrl", () => {
+      it("return success", async () => {
+        const authorizeUrl = await pocket.getAuthorizeUrl();
+        console.log("authorizeUrl = ", authorizeUrl);
+
+        expect(authorizeUrl).toBeDefined();
+      });
+    });
+
     describe("getAccessToken with requestBody", () => {
       it("return success", async () => {
         const data = {

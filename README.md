@@ -17,8 +17,6 @@ Refer to [Pocket API](http://getpocket.com/developer/docs/overview) for request 
 Refer to [Authentication](http://getpocket.com/developer/docs/authentication) for requestToken and accessToken
 
 ```typescript
-// js
-const Pocket = require('node-pocket-api');
 // ts
 import Pocket from 'node-pocket-api';
 

@@ -46,7 +46,7 @@ class Pocket {
       if (data) {
         response = await axios.post(`${rootUrl}/oauth/request`, data, {
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/json; charset=UTF-8",
             "X-Accept": "application/json",
           },
         });
@@ -57,7 +57,7 @@ class Pocket {
         };
         response = await axios.post(`${rootUrl}/oauth/request`, requestBody, {
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/json; charset=UTF-8",
             "X-Accept": "application/json",
           },
         });
@@ -74,6 +74,16 @@ class Pocket {
     return result;
   }
 
+  async getAuthorizeUrl() {
+    let authorizeUrl = "";
+
+    if (this.requestToken && this.redirectUri) {
+      authorizeUrl = `https://getpocket.com/auth/authorize?request_token=${this.requestToken}&redirect_uri=${this.redirectUri}`;
+    }
+
+    return authorizeUrl;
+  }
+
   async getAccessToken(data?: GetAccessTokenBody) {
     let result = "";
 
@@ -82,7 +92,7 @@ class Pocket {
       if (data) {
         response = await axios.post(`${rootUrl}/oauth/authorize`, data, {
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/json; charset=UTF-8",
             "X-Accept": "application/json",
           },
         });
@@ -93,7 +103,7 @@ class Pocket {
         };
         response = await axios.post(`${rootUrl}/oauth/authorize`, requestBody, {
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/json; charset=UTF-8",
             "X-Accept": "application/json",
           },
         });
@@ -116,7 +126,7 @@ class Pocket {
     try {
       const response = await axios.post(`${rootUrl}/add`, data, {
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json; charset=UTF-8",
           "X-Accept": "application/json",
         },
       });
@@ -136,7 +146,7 @@ class Pocket {
     try {
       const response = await axios.post(`${rootUrl}/send`, data, {
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json; charset=UTF-8",
           "X-Accept": "application/json",
         },
       });
@@ -156,7 +166,7 @@ class Pocket {
     try {
       const response = await axios.post(`${rootUrl}/get`, data, {
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json; charset=UTF-8",
           "X-Accept": "application/json",
         },
       });
