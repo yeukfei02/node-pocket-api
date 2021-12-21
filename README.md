@@ -40,6 +40,13 @@ const data = {
 const requestToken = await pocket.getRequestToken(data);
 ```
 
+### getAuthorizeUrl
+
+```typescript
+// getAuthorizeUrl
+const authorizeUrl = await pocket.getAuthorizeUrl();
+```
+
 ### accessToken
 
 ```typescript
