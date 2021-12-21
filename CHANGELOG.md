@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.4](https://github.com/yeukfei02/node-pocket-api/compare/v0.2.3...v0.2.4) (2021-12-21)
+
+
+### Bug Fixes
+
+* 🐛 add back dist ([e16b427](https://github.com/yeukfei02/node-pocket-api/commit/e16b42728b90e63e50c62dc98778f74c26fc8cc6))
+
 ### [0.2.3](https://github.com/yeukfei02/node-pocket-api/compare/v0.2.2...v0.2.3) (2021-12-21)
 
 
