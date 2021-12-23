@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.6](https://github.com/yeukfei02/node-pocket-api/compare/v0.2.5...v0.2.6) (2021-12-23)
+
+
+### Bug Fixes
+
+* 🐛 fix func default type ([fdfc9e8](https://github.com/yeukfei02/node-pocket-api/commit/fdfc9e85906648506732b1413df11ee10aebed0c))
+
 ### [0.2.5](https://github.com/yeukfei02/node-pocket-api/compare/v0.2.4...v0.2.5) (2021-12-21)
 
 ### [0.2.4](https://github.com/yeukfei02/node-pocket-api/compare/v0.2.3...v0.2.4) (2021-12-21)
