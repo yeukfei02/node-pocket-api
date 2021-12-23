@@ -121,7 +121,7 @@ class Pocket {
     }
     addItems(data) {
         return __awaiter(this, void 0, void 0, function* () {
-            let result = "";
+            let result = null;
             try {
                 const response = yield axios_1.default.post(`${rootUrl}/add`, data, {
                     headers: {
@@ -141,7 +141,7 @@ class Pocket {
     }
     modifyItems(data) {
         return __awaiter(this, void 0, void 0, function* () {
-            let result = "";
+            let result = null;
             try {
                 const response = yield axios_1.default.post(`${rootUrl}/send`, data, {
                     headers: {
@@ -161,7 +161,7 @@ class Pocket {
     }
     retrieveItems(data) {
         return __awaiter(this, void 0, void 0, function* () {
-            let result = "";
+            let result = null;
             try {
                 const response = yield axios_1.default.post(`${rootUrl}/get`, data, {
                     headers: {
