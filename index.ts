@@ -121,7 +121,7 @@ class Pocket {
   }
 
   async addItems(data: AddItemsBody) {
-    let result = "";
+    let result = null;
 
     try {
       const response = await axios.post(`${rootUrl}/add`, data, {
@@ -141,7 +141,7 @@ class Pocket {
   }
 
   async modifyItems(data: ModifyItemsBody) {
-    let result = "";
+    let result = null;
 
     try {
       const response = await axios.post(`${rootUrl}/send`, data, {
@@ -161,7 +161,7 @@ class Pocket {
   }
 
   async retrieveItems(data: RetrieveItemsBody) {
-    let result = "";
+    let result = null;
 
     try {
       const response = await axios.post(`${rootUrl}/get`, data, {
