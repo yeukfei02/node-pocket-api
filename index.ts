@@ -1,6 +1,6 @@
 import axios from "axios";
+import BaseClass from "./baseClass";
 import { getRootUrl } from "./helpers/helpers";
-import { Config } from "./interface/config";
 import { GetRequestTokenBody } from "./interface/getRequestTokenBody";
 import { GetAccessTokenBody } from "./interface/getAccessTokenBody";
 import { AddItemsBody } from "./interface/addItemsBody";
@@ -9,35 +9,7 @@ import { RetrieveItemsBody } from "./interface/retrieveItemsBody";
 
 const rootUrl = getRootUrl();
 
-class Pocket {
-  consumerKey = "";
-  redirectUri = "pocketapp1234:authorizationFinished";
-  requestToken = "";
-  accessToken = "";
-
-  constructor(config?: Config) {
-    if (config) {
-      this.consumerKey = config.consumerKey;
-      this.redirectUri = config.redirectUri;
-    }
-  }
-
-  setConsumerKey(consumerKey: string) {
-    this.consumerKey = consumerKey;
-  }
-
-  setRedirectUri(redirectUri: string) {
-    this.redirectUri = redirectUri;
-  }
-
-  setRequestToken(requestToken: string) {
-    this.requestToken = requestToken;
-  }
-
-  setAccessToken(accessToken: string) {
-    this.accessToken = accessToken;
-  }
-
+class Pocket extends BaseClass {
   async getRequestToken(data?: GetRequestTokenBody) {
     let result = "";
 

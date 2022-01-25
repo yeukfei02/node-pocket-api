@@ -13,31 +13,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
+const baseClass_1 = __importDefault(require("./baseClass"));
 const helpers_1 = require("./helpers/helpers");
 const rootUrl = (0, helpers_1.getRootUrl)();
-class Pocket {
-    constructor(config) {
-        this.consumerKey = "";
-        this.redirectUri = "pocketapp1234:authorizationFinished";
-        this.requestToken = "";
-        this.accessToken = "";
-        if (config) {
-            this.consumerKey = config.consumerKey;
-            this.redirectUri = config.redirectUri;
-        }
-    }
-    setConsumerKey(consumerKey) {
-        this.consumerKey = consumerKey;
-    }
-    setRedirectUri(redirectUri) {
-        this.redirectUri = redirectUri;
-    }
-    setRequestToken(requestToken) {
-        this.requestToken = requestToken;
-    }
-    setAccessToken(accessToken) {
-        this.accessToken = accessToken;
-    }
+class Pocket extends baseClass_1.default {
     getRequestToken(data) {
         return __awaiter(this, void 0, void 0, function* () {
             let result = "";
