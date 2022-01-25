@@ -1,6 +1,6 @@
 {
   "name": "node-pocket-api",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "main": "./dist/index.js",
   "repository": "https://github.com/yeukfei02/node-pocket-api.git",
   "author": "Donald Wu <yeukfei02@gmail.com>",

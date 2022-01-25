@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.7](https://github.com/yeukfei02/node-pocket-api/compare/v0.2.6...v0.2.7) (2022-01-25)
+
+
+### Features
+
+* 🎸 add baseclass ([5cc994b](https://github.com/yeukfei02/node-pocket-api/commit/5cc994b28db3657dd7ad9ecb901c2536577c4837))
+
 ### [0.2.6](https://github.com/yeukfei02/node-pocket-api/compare/v0.2.5...v0.2.6) (2021-12-23)
 
 
