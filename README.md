@@ -139,4 +139,7 @@ pocket.setAccessToken(accessToken);
 ```zsh
 // run test case
 $ yarn run test
+
+// publish to npm
+$ yarn publish
 ```
