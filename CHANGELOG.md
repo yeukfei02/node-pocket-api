@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.8](https://github.com/yeukfei02/node-pocket-api/compare/v0.2.7...v0.2.8) (2022-02-24)
+
+
+### Features
+
+* 🎸 fix dist folder ([faf07d2](https://github.com/yeukfei02/node-pocket-api/commit/faf07d288da6e5a6d6abae2d15a77b4a73d49a81))
+
 ### [0.2.7](https://github.com/yeukfei02/node-pocket-api/compare/v0.2.6...v0.2.7) (2022-01-25)
 
 
