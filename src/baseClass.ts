@@ -1,4 +1,4 @@
-import { Config } from "./interface/config";
+import { Config } from "../interface/config";
 
 class BaseClass {
   consumerKey = "";

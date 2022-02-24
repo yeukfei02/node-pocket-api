@@ -17,7 +17,7 @@ const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const faker_1 = __importDefault(require("faker"));
 const dayjs_1 = __importDefault(require("dayjs"));
-const index_1 = __importDefault(require("../index"));
+const index_1 = require("../index");
 let pocket;
 const pocketTest = () => {
     describe("Pocket Api", () => {
@@ -30,7 +30,7 @@ const pocketTest = () => {
                     ? process.env.POCKET_REDIRECT_URI
                     : "",
             };
-            pocket = new index_1.default(config);
+            pocket = new index_1.Pocket(config);
         });
         describe("getRequestToken with requestBody", () => {
             it("return success", () => __awaiter(void 0, void 0, void 0, function* () {

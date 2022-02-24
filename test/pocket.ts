@@ -4,7 +4,7 @@ env.config();
 import faker from "faker";
 import dayjs from "dayjs";
 
-import Pocket from "../index";
+import { Pocket } from "../index";
 
 let pocket: Pocket;
 

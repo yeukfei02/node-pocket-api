@@ -17,8 +17,11 @@ Refer to [Pocket API](http://getpocket.com/developer/docs/overview) for request 
 Refer to [Authentication](http://getpocket.com/developer/docs/authentication) for requestToken and accessToken
 
 ```typescript
+// js
+const { Pocket } = require('node-pocket-api');
+
 // ts
-import Pocket from 'node-pocket-api';
+import { Pocket } from 'node-pocket-api';
 
 const consumerKey = '<your consumer_key>';
 const redirectUri = '<your redirect_uri>';  // eg. 'localhost:3000/redirect'
